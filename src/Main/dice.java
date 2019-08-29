@@ -14,11 +14,11 @@ public class dice {
         int de3 = dice.random(6);
         int de4 = dice.random(6);
         int de5 = dice.random(6);
-        System.out.println("la valeur du dé est : " + de1);
-        System.out.println("la valeur du dé est : " + de2);
-        System.out.println("la valeur du dé est : " + de3);
-        System.out.println("la valeur du dé est : " + de4);
-        System.out.println("la valeur du dé est : " + de5);
+        System.out.println("the dice value is : " + de1);
+        System.out.println("the dice value is : " + de2);
+        System.out.println("the dice value is : " + de3);
+        System.out.println("the dice value is : " + de4);
+        System.out.println("the dice value is : " + de5);
     }
 }
 
