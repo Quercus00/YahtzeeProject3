@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        //menu.menu(); feature a venir
+        Scanner sc = new Scanner(System.in); //initialisation
         int i= 3;
         String str;
         int j;
@@ -19,7 +20,7 @@ public class main {
 
 
 
-            if (die1 == 0) {
+            if (die1 == 0) {//phase de condition pour la sauvegarde des données
                 die1=dice.rollDice(die1);
             }
             if (die2 == 0){
@@ -78,6 +79,8 @@ public class main {
 
             i-=1;
         }while (i!=0);
+
+
 
 
     }
