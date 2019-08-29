@@ -8,3 +8,4 @@ public class dice {
         return a;
     }
 }
+
