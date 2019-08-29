@@ -7,5 +7,6 @@ public class main {
         System.out.println("la valeur du dé est : " + x);
         System.out.println("test");
         System.out.println("test 2");
+        System.out.println("aaaa");
     }
 }
