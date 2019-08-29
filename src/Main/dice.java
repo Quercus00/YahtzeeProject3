@@ -10,7 +10,7 @@ public class dice {
 
     public static int rollDice(int d){
         d = dice.random(6);
-        System.out.println("die : " + d);
+
         return d;
     }
 
