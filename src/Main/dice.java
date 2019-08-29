@@ -13,5 +13,7 @@ public class dice {
         System.out.println("die : " + d);
         return d;
     }
+
+
 }
 
