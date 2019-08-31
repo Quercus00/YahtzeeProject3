@@ -42,11 +42,11 @@ public class main {
            str = sc.nextLine();
             if(str.equals("yes"))
             {
-                System.out.println("how many?");
+                System.out.println("how many ?");
                 int NumbDice = sc.nextInt();
                     for (j = 0 ;j< NumbDice ; j++)
                     {
-                        System.out.println("number of the dice to reroll?");
+                        System.out.println("number of the dice to reroll ?");
                         int reroll= sc.nextInt();
                         if (reroll<1 || reroll>5){
                             System.out.println("please enter number between 1 and 5?");
