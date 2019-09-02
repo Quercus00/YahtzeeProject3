@@ -42,6 +42,7 @@ public class main {
             //test functions
             combinaisons.test_brelan(die1, die2, die3, die4, die5);
             combinaisons.test_yahtzee(die1, die2, die3, die4, die5);
+            combinaisons.test_square(die1, die2, die3, die4, die5);
             // end test functions
 
 

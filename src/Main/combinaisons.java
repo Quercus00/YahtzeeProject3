@@ -40,5 +40,20 @@ public class combinaisons {
         }
     }
 
+    public static void test_square(int die1, int die2, int die3, int die4, int die5){
+        if (die1 == die2 && die1 == die3 && die1 == die4){
+            System.out.println("Carré possible avec les dés : dé 1 = " + die1 + " dé 2 = " + die2 + " dé 3 = " + die3 + " dé 4 = " + die4);
+        } else if(die1 == die2 && die1 == die3 && die1 == die5){
+            System.out.println("Carré possible avec les dés : dé 1 = " + die1 + " dé 2 = " + die2 + " dé 3 = " + die3 + " dé 5 = " + die5);
+        } else if(die1 == die2 && die1 == die4 && die1 == die5){
+            System.out.println("Carré possible avec les dés : dé 1 = " + die1 + " dé 2 = " + die2 + " dé 4 = " + die4 + " dé 5 = " + die5);
+        } else if(die1 == die3 && die1 == die4 && die1 == die5){
+            System.out.println("Carré possible avec les dés : dé 1 = " + die1 + " dé 3 = " + die3 + " dé 4 = " + die4 + " dé 5 = " + die5);
+        } else if(die2 == die3 && die2 == die4 && die2 == die5){
+            System.out.println("Carré possible avec les dés : dé 2 = " + die2 + " dé 3 = " + die3 + " dé 4 = " + die4 + " dé 5 = " + die5);
+        } else{
+            System.out.println("Carré pas possible");
+        }
+    }
 
 }
