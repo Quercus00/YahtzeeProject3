@@ -37,6 +37,14 @@ public class main {
             die5=dice.rollDice(die5);
             }
             System.out.println("scores are : " +die1+" "+die2+" "+die3+" "+die4+" "+die5);
+            System.out.println(" ");
+            System.out.println(" ");
+            //test functions
+            combinaisons.test_brelan(die1, die2, die3, die4, die5);
+            combinaisons.test_yahtzee(die1, die2, die3, die4, die5);
+            // end test functions
+
+
             System.out.println("Do you want to reroll some dice ? Say yes or no ");
 
            str = sc.nextLine();
