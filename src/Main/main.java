@@ -18,6 +18,7 @@ public class main {
         int die4 = 0;
         int die5 = 0;
 
+
        for(i=1; i<=3;i++) {
 
 
