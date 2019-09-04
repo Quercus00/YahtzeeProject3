@@ -12,7 +12,7 @@ public class menu {
             System.out.println("Do you want to play (1) or quit the game (2) ?");
             select = choice.nextInt();
             choice.close();
-        }while (select<1 & select>2);
+        }while (select<1 || select>2);
         if (select == 1){
             System.out.println("Let's go !");
         }

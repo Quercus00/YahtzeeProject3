@@ -6,22 +6,14 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        //menu.menu(); feature a venir
+        /*//menu.menu(); feature a venir
         Scanner sc = new Scanner(System.in); //initialisation
-        int i;
+        int i, j;
         String str;
-        int j;
         int bug = 1;
-        int die1 = 0;
-        int die2 = 0;
-        int die3 = 0;
-        int die4 = 0;
-        int die5 = 0;
-
+        int die1= 0, die2= 0, die3= 0, die4= 0, die5 = 0;
 
        for(i=1; i<=3;i++) {
-
-
            if (die1 == 0) {//phase de condition pour la sauvegarde des données
                die1 = dice.rollDice(die1);
            }
@@ -48,7 +40,6 @@ public class main {
            // end test functions" + die3 + " " + die4 + " " + die5);
            if (i < 3){
                System.out.println("Do you want to reroll some dice ? Say yes or no ");
-
            str = sc.next();//want to use nextline but then it just skip the text input
 
            if (str.equals("yes")) {
@@ -77,27 +68,31 @@ public class main {
                        case 5:
                            die5 = 0;
                            break;
-
-
                    }
                }
-
-
            } else {
-               System.out.println("no reroll");
-
+               System.out.println("No reroll");
            }
-
        }
        }
-        if (die1==die2 && die1==die3 && die1==die4 && die1==die5)
+        /*if (die1==die2 && die1==die3 && die1==die4 && die1==die5)
         {
             System.out.println("YAHTZEE");
-        }
+        }*/
+
+        
+
+
+
+
+
+
+
+
+
 
 
 
 
     }
-
 }

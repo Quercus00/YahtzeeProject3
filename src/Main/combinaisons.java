@@ -4,7 +4,6 @@ public class combinaisons {
     public static void test_brelan(int die1, int die2, int die3, int die4, int die5) {
 
         //test brelan
-        //System.out.println("dé 1 = " + die1 + "   dé 2 = " + die2 + "   dé 3 = " + die3 + "   dé 4 = " + die4 + "   dé 5 = " + die5);
 
         if(die1 == die2 && die3 == die2)
         {
