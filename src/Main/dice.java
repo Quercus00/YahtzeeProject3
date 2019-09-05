@@ -53,9 +53,7 @@ public class dice {
 <<<<<<< Updated upstream
             x = Character.getNumericValue(choice[i]);
             if ((Character.getNumericValue(choice[i]) != 0) && choice[i]!=' ') {
-
-
-                d[x-1] = dice.random(6);
+              d[x-1] = dice.random(6);
             }
 =======
                         d[x - 1] = dice.random(6);
