@@ -4,6 +4,8 @@ package Main;
 
 import java.util.Scanner;
 
+import  Main.dice;
+
 public class main {
     public static void main(String[] args) {
         /*//menu.menu(); feature a venir
@@ -100,8 +102,17 @@ public class main {
 
 
             //Play the turn of each player
-            for(int i=1; i<=players ; i++){
-                System.out.println("******* Player " + i + " *********");
+            for(int i=0; i<players ; i++){
+                System.out.println("******* Player " + (i+1) + " *********");
+                int[]dice = Main.dice.roll(); //creation and roll the dices  of the player dices.
+
+
+
+
+                // show the score of the player
+                score.printPlayerScore(players, data);
+
+
             }
 
             // test if the score is complete : we check the score sheet of the last player
@@ -111,29 +122,9 @@ public class main {
                     stop = false;
                     break;
                 }
+                System.out.println("Game over !\nFinal Score : ");
+                score.printFinalScore(players, data);
             }
-
-
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
