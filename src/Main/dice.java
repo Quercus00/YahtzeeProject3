@@ -23,10 +23,23 @@ public class dice {
     }
 
 // fct for reroll the dices
-    public static int[] roll(int[]d, int[]e) {
-        for (int i = 0; i < 4; i++) {
-            if (e[i] != 0) {
-                d[i] = dice.random(6);
+    public static int[] reroll(int[]d) {
+        String e;
+        int x;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("which dices do you want to reroll ?");
+        e = sc.nextLine();
+        char[] choice = e.toCharArray(); //convert 'e' to an array of char
+        int k = e.length();
+
+        for (int i = 0; i < k; i++) {
+
+            x = Character.getNumericValue(choice[i]);
+            if ((Character.getNumericValue(choice[i]) != 0) && choice[i]!=' ') {
+
+
+                d[x-1] = dice.random(6);
             }
         }
         return d;
