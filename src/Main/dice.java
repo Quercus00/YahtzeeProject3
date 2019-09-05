@@ -47,24 +47,19 @@ public class dice {
                 for (int i = 0; i < k; i++) {
 
                     x = Character.getNumericValue(choice[i]);
-                    if ((Character.getNumericValue(choice[i]) != 0) && choice[i] != ' ') {
+                    if (x != 0 && choice[i] != ' ') {
 
 
-<<<<<<< Updated upstream
-            x = Character.getNumericValue(choice[i]);
-            if ((Character.getNumericValue(choice[i]) != 0) && choice[i]!=' ') {
-              d[x-1] = dice.random(6);
-            }
-=======
                         d[x - 1] = dice.random(6);
                     }
                 }
 
             }else {secu = false;}
 
->>>>>>> Stashed changes
         }
         return d;
     }
 }
+
+
 
