@@ -24,23 +24,47 @@ public class dice {
 
 // fct for reroll the dices
     public static int[] reroll(int[]d) {
+        Scanner sc = new Scanner(System.in);
         String e;
         int x;
+        boolean secu= false;
+        while(!secu ) {
+            System.out.println("Do you want to reroll? tape yes or no");
+            String reroll = sc.nextLine();
+            reroll = reroll.toLowerCase();
+            if (reroll.equals("no")) {
+                secu = true;
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("which dices do you want to reroll ?");
-        e = sc.nextLine();
-        char[] choice = e.toCharArray(); //convert 'e' to an array of char
-        int k = e.length();
 
-        for (int i = 0; i < k; i++) {
+            } else if (reroll.equals("yes")) {
 
+                secu = true;
+                System.out.println("which dices do you want to reroll ?");
+                e = sc.nextLine();
+                char[] choice = e.toCharArray(); //convert 'e' to an array of char
+                int k = e.length();
+
+                for (int i = 0; i < k; i++) {
+
+                    x = Character.getNumericValue(choice[i]);
+                    if ((Character.getNumericValue(choice[i]) != 0) && choice[i] != ' ') {
+
+
+<<<<<<< Updated upstream
             x = Character.getNumericValue(choice[i]);
             if ((Character.getNumericValue(choice[i]) != 0) && choice[i]!=' ') {
 
 
                 d[x-1] = dice.random(6);
             }
+=======
+                        d[x - 1] = dice.random(6);
+                    }
+                }
+
+            }else {secu = false;}
+
+>>>>>>> Stashed changes
         }
         return d;
     }
