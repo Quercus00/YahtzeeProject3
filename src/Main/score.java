@@ -27,4 +27,9 @@ public class score {
             System.out.println("\n");
         }
     }
+
+    public static void choicescore (int[] possibilities, int[][] data, boolean[][] databool)
+    {
+
+    }
 }
