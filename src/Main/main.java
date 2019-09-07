@@ -32,14 +32,15 @@ public class main {
             //Play the turn of each player
             for(int i=0; i<players ; i++){
                 System.out.println("******* Player " + (i+1) + " *********");
-
-                int[]dice = Main.dice.roll(); //creation and roll the dices  of the player dices.
-
-                int[]possibilities;
+                int[]possibilities={0,0,0,0,0,0,0,0,0,0,0,0,0};
                 String[]name = new String[]{"Aces           ","Twos           ","Threes         ","Fours          ","Fives          ","Sixes          ",
                         "Three Of A Kind", "Four Of A Kind ","Full House     ","Small Straight ",
                         "Large Straight ","Yahtzee        ","Chance         "};
+                int[]dice = Main.dice.roll(name,possibilities); //creation and roll the dices  of the player dices.
                 possibilities =combinaisons.tests(databool, dice, players);
+
+
+
 
 
                 System.out.println("DICES : [" +dice[0]+"]");
@@ -51,13 +52,13 @@ public class main {
 
 
 
-                for (int j=0; j<13; j++){
 
-                    System.out.println("score available " + name[j] +"  ["+possibilities[j] +"]");
-
-                }
-
-
+                dice=Main.dice.reroll(dice,name,possibilities);
+                System.out.println("choose your score :");
+                Scanner choice = new Scanner(System.in);
+                int choix = choice.nextInt();
+                data[i][choix]= possibilities[choix];
+                databool[i][choix]=true;
 
                 // show the score of the player
                 score.printPlayerScore(players, data);

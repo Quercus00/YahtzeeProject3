@@ -14,16 +14,21 @@ public class dice {
     }
 
 // the dices are in an array
-    public static int[] roll() {
+    public static int[] roll(String[] name,int[] possibilities) {
         int []d= new int[]{0,0,0,0,0};
         for(int i=0; i<4; i++){
             d[i] = dice.random(6);
+        }
+        for (int j=0; j<13; j++){
+
+            System.out.println(j+"score available " + name[j] +"  ["+possibilities[j] +"]");
+
         }
         return d;
     }
 
 // fct for reroll the dices
-    public static int[] reroll(int[]d) {
+    public static int[] reroll(int[]d,String[] name,int[] possibilities) {
         Scanner sc = new Scanner(System.in);
         String e;
         int x;
@@ -39,6 +44,11 @@ public class dice {
             } else if (reroll.equals("yes")) {
 
                 secu = true;
+                for (int j=0; j<13; j++){
+
+                    System.out.println(j+"score available " + name[j] +"  ["+possibilities[j] +"]");
+
+                }
                 System.out.println("which dices do you want to reroll ?");
                 e = sc.nextLine();
                 char[] choice = e.toCharArray(); //convert 'e' to an array of char
