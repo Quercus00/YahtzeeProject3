@@ -48,9 +48,9 @@ public class combinaisons {
         return 0;
     }
 
-    /** Square **/
+    /** Four Of A Kind **/
 
-    public static int square(int[] dice){
+    public static int FourOfAKind(int[] dice){
         for(int i : dice){
             if (numb_similarities(dice, 4)== 4)
                 return sum(dice);
@@ -68,9 +68,9 @@ public class combinaisons {
         return 0;
     }
 
-    /** Brelan **/
+    /** Three Of A Kind **/
 
-    public static int brelan(int[] dice){
+    public static int ThreeOfAKind(int[] dice){
         for(int i : dice){
             if (numb_similarities(dice, 3) == 3)
                 return sum(dice);
@@ -78,9 +78,9 @@ public class combinaisons {
         return 0;
     }
 
-    /** Little suite **/
+    /** Small Straight **/
 
-    public static int littlesuite(int[] dice){
+    public static int SmallStraight(int[] dice){
         for (int i : dice){
             if ((cpt_numb(dice, 4)>=1) && (cpt_numb(dice,3)>=1))
                 if ((cpt_numb(dice, 2)>=1) && (cpt_numb(dice, 1)>=1))
@@ -94,9 +94,9 @@ public class combinaisons {
         return 0;
     }
 
-    /** big suite **/
+    /** Large Straight **/
 
-    public static int bigsuite(int[] dice){
+    public static int LargeStraight(int[] dice){
         for (int i : dice){
             if ((cpt_numb(dice, 2)>=1) && (cpt_numb(dice,3)>=1) && (cpt_numb(dice, 4)>=1) && (cpt_numb(dice, 5)>=1))
                 if ((cpt_numb(dice, 1)>=1))
@@ -161,4 +161,52 @@ public class combinaisons {
         }
         return 0;
     }
+
+
+    /** function test which score is available **/
+    public static int[] tests(boolean[][]databool, int[]dice, int player){
+        int[]scorepossibilities = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,};
+            if(! databool[player-1][0]){
+            scorepossibilities[0] = aces(dice);
+            }
+            if(! databool[player-1][1]){
+                scorepossibilities[1] = twos(dice);
+            }
+            if(! databool[player-1][2]){
+                scorepossibilities[2] = threes(dice);
+            }
+            if(! databool[player-1][3]){
+                scorepossibilities[3] = fours(dice);
+            }
+            if(! databool[player-1][4]){
+                scorepossibilities[4] = fives(dice);
+            }
+            if(! databool[player-1][5]){
+                scorepossibilities[5] = sixes(dice);
+            }
+            if(! databool[player-1][6]){
+                scorepossibilities[6] = ThreeOfAKind(dice);
+            }
+            if(! databool[player-1][7]){
+                scorepossibilities[7] = FourOfAKind(dice);
+            }
+            if(! databool[player-1][8]){
+                scorepossibilities[8] = full(dice);
+            }
+            if(! databool[player-1][9]){
+            scorepossibilities[9] = SmallStraight(dice);
+             }
+            if(! databool[player-1][10]){
+            scorepossibilities[10] = LargeStraight(dice);
+            }
+            if(! databool[player-1][11]){
+            scorepossibilities[11] = yahtzee(dice);
+            }
+            if(! databool[player-1][12]) {
+                scorepossibilities[12] = chance(dice);
+            }
+        return scorepossibilities;
+    }
+
+
 }

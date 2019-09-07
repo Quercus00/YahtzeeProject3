@@ -33,7 +33,19 @@ public class main {
             for(int i=0; i<players ; i++){
                 System.out.println("******* Player " + (i+1) + " *********");
                 int[]dice = Main.dice.roll(); //creation and roll the dices  of the player dices.
+                int[]possibilities = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0};
+                possibilities =combinaisons.tests(databool, dice, players);
 
+                
+                System.out.println("DICES : [" +dice[0]+"]");
+                System.out.println("DICES : [" +dice[1]+"]");
+                System.out.println("DICES : [" +dice[2]+"]");
+                System.out.println("DICES : [" +dice[3]+"]");
+                System.out.println("DICES : [" +dice[4]+"]");
+                for (int j=0; j<13; j++){
+
+                    System.out.println("TEST : ["+possibilities[j] +"]");
+                }
 
 
 
