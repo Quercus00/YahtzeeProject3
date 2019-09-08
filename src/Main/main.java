@@ -44,7 +44,9 @@ public class main {
 
                 // -------- show the possibilities of score ------------
                 for (int j=0; j<13; j++){
-                    System.out.println("Score available " + name[j] +"  ["+possibilities[j] +"]");
+                    if(!databool[players-1][j]) {
+                        System.out.println("Score available " + name[j] + "  [" + possibilities[j] + "]");
+                    }
                 }
                 // -----------------------------------------------------
 
@@ -71,11 +73,12 @@ public class main {
 
 
                 System.out.println("choose your score :");
-                // -------- show the possibilities of score ------------
-                for (int j=0; j<13; j++){
-                    System.out.println("Score available " + name[j] +"  ["+possibilities[j] +"]  type -->("+j+")");
+                for(int sc=0; sc<13 ;sc++){
+                    if(!databool[players-1][sc]){
+                        System.out.println(name[sc] +"  ["+possibilities[sc] +"] : type ("+sc+")");
+                    }
                 }
-                // -----------------------------------------------------
+
                 Scanner choice = new Scanner(System.in);
                 int choix = choice.nextInt();
                 data[i][choix]= possibilities[choix];
