@@ -42,7 +42,7 @@ public class dice {
                 secu = true;     **/
                 for (int j=0; j<13; j++){
                     System.out.println("Score available " + name[j] +"  ["+possibilities[j] +"]");
-                }    
+                }     
                 printDice(d);
                 System.out.println("which dices do you want to reroll ?");
                 e = sc.nextLine();
