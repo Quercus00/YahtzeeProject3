@@ -62,6 +62,7 @@ public class main {
                     }
                     else if(reroll.equals("yes")) {
                         dice = Main.dice.reroll(dice, name, possibilities);
+                        Main.dice.printDice(dice);
                         t++;
                     }
                 }
@@ -70,6 +71,11 @@ public class main {
 
 
                 System.out.println("choose your score :");
+                // -------- show the possibilities of score ------------
+                for (int j=0; j<13; j++){
+                    System.out.println("Score available " + name[j] +"  ["+possibilities[j] +"]  type -->("+j+")");
+                }
+                // -----------------------------------------------------
                 Scanner choice = new Scanner(System.in);
                 int choix = choice.nextInt();
                 data[i][choix]= possibilities[choix];
