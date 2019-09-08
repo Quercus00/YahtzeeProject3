@@ -14,16 +14,12 @@ public class dice {
     }
 
 // the dices are in an array
-    public static int[] roll(String[] name,int[] possibilities) {
+    public static int[] roll() {
         int []d= new int[]{0,0,0,0,0};
-        for(int i=0; i<4; i++){
+        for(int i=0; i<=4; i++){
             d[i] = dice.random(6);
         }
-        for (int j=0; j<13; j++){
 
-            System.out.println(j+"score available " + name[j] +"  ["+possibilities[j] +"]");
-
-        }
         return d;
     }
 
@@ -32,7 +28,7 @@ public class dice {
         Scanner sc = new Scanner(System.in);
         String e;
         int x;
-        boolean secu= false;
+        /**boolean secu= false;
         while(!secu ) {
             System.out.println("Do you want to reroll? tape yes or no");
             String reroll = sc.nextLine();
@@ -43,12 +39,11 @@ public class dice {
 
             } else if (reroll.equals("yes")) {
 
-                secu = true;
+                secu = true;     **/
                 for (int j=0; j<13; j++){
-
-                    System.out.println(j+"score available " + name[j] +"  ["+possibilities[j] +"]");
-
+                    System.out.println("Score available " + name[j] +"  ["+possibilities[j] +"]");
                 }
+                printDice(d);
                 System.out.println("which dices do you want to reroll ?");
                 e = sc.nextLine();
                 char[] choice = e.toCharArray(); //convert 'e' to an array of char
@@ -64,11 +59,24 @@ public class dice {
                     }
                 }
 
-            }else {secu = false;}
+            //}else {secu = false;}
 
-        }
+        //}
         return d;
     }
+
+
+    /** ------------Print the dices -------------- **/
+    public static void printDice(int[]dice){
+        for (int i=0; i<5; i++) {
+            System.out.println("DICE "+ (i+1) +" : [" + dice[i] + "]");
+        }
+        System.out.println("\n\n");
+    }
+
+
+
+
 }
 
 

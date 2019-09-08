@@ -36,21 +36,35 @@ public class main {
                 String[]name = new String[]{"Aces           ","Twos           ","Threes         ","Fours          ","Fives          ","Sixes          ",
                         "Three Of A Kind", "Four Of A Kind ","Full House     ","Small Straight ",
                         "Large Straight ","Yahtzee        ","Chance         "};
-                int[]dice = Main.dice.roll(name,possibilities); //creation and roll the dices  of the player dices.
+                int[]dice = Main.dice.roll(); //creation and roll the dices  of the player dices.
                 possibilities =combinaisons.tests(databool, dice, players);
 
+                Main.dice.printDice(dice);
+
+
+                // -------- show the possibilities of score ------------
+                for (int j=0; j<13; j++){
+                    System.out.println("Score available " + name[j] +"  ["+possibilities[j] +"]");
+                }
+                // -----------------------------------------------------
 
 
 
-
-                System.out.println("DICES : [" +dice[0]+"]");
-                System.out.println("DICES : [" +dice[1]+"]");
-                System.out.println("DICES : [" +dice[2]+"]");
-                System.out.println("DICES : [" +dice[3]+"]");
-
-                System.out.println("DICES : [" +dice[4]+"] \n\n\n");
-
-
+                //----- the player has 3 tries with the dices -----
+                int t=0;
+                while(t<3){
+                    Scanner sc = new Scanner(System.in);
+                    System.out.println("Do you want to reroll? tape yes or no");
+                    String reroll = sc.nextLine();
+                    reroll = reroll.toLowerCase();
+                    if(reroll.equals("no")){
+                        t=3;
+                    }
+                    else{
+                        dice = Main.dice.reroll(dice, name, possibilities);
+                    }
+                }
+                // -----------------------------------------
 
 
                 dice=Main.dice.reroll(dice,name,possibilities);
@@ -64,7 +78,7 @@ public class main {
                 score.printPlayerScore(players, data);
 
 
-            }
+            } // end of the player turn
 
             // test if the score is complete : we check the score sheet of the last player
             stop = true;
