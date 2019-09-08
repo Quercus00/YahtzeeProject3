@@ -60,14 +60,15 @@ public class main {
                     if(reroll.equals("no")){
                         t=3;
                     }
-                    else{
+                    else if(reroll.equals("yes")) {
                         dice = Main.dice.reroll(dice, name, possibilities);
+                        t++;
                     }
                 }
                 // -----------------------------------------
 
 
-                dice=Main.dice.reroll(dice,name,possibilities);
+
                 System.out.println("choose your score :");
                 Scanner choice = new Scanner(System.in);
                 int choix = choice.nextInt();
