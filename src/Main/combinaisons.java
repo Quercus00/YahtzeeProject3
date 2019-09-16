@@ -52,7 +52,7 @@ public class combinaisons {
 
     public static int FourOfAKind(int[] dice){
         for(int i : dice){
-            if (numb_similarities(dice, 4)== 4)
+            if (numb_similarities(dice, 4)== 4 || numb_similarities(dice, 5) == 5)
                 return sum(dice);
         }
         return 0;
@@ -72,7 +72,7 @@ public class combinaisons {
 
     public static int ThreeOfAKind(int[] dice){
         for(int i : dice){
-            if (numb_similarities(dice, 3) == 3)
+            if (numb_similarities(dice, 3) == 3 ||numb_similarities(dice, 4) ==4 || numb_similarities(dice, (5)) == 5 )
                 return sum(dice);
         }
         return 0;
