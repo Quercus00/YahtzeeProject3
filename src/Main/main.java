@@ -9,9 +9,9 @@ import  Main.dice;
 public class main {
     public static void main(String[] args) {
 
-
         int players = 0; // default game is for one player
         do{
+            System.out.println("\n\nWelcome in the Yahtzee Project ! \nCoded by BOERSMA Hélène, DIDIER Antoine and RAMBERT Alban \n\n\n");
             System.out.println("How many players ? (5 players maximum)\n---> ");
             Scanner choice = new Scanner(System.in);
             players = choice.nextInt();
@@ -101,5 +101,8 @@ public class main {
                 score.printFinalScore(players, data);
             }
         }
+
+
+
     }
 }
