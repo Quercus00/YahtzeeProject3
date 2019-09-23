@@ -55,13 +55,13 @@ public class main {
 
                 //----- the player has 3 tries with the dices -----
                 int t=0;
-                while(t<3){
+                while(t<2){
                     Scanner sc = new Scanner(System.in);
                     System.out.println("Do you want to reroll? tape yes or no");
                     String reroll = sc.nextLine();
                     reroll = reroll.toLowerCase();
                     if(reroll.equals("no")){
-                        t=3;
+                        t=2;
                     }
                     else if(reroll.equals("yes")) {
 
