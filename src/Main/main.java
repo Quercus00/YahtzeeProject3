@@ -45,6 +45,7 @@ public class main {
                 // -------- show the possibilities of score ------------
                 for (int j=0; j<13; j++){
                     if(!databool[players-1][j]) {
+                        possibilities =combinaisons.tests(databool, dice, players);
                         System.out.println("Score available " + name[j] + "  [" + possibilities[j] + "]");
                     }
                 }
@@ -63,8 +64,10 @@ public class main {
                         t=3;
                     }
                     else if(reroll.equals("yes")) {
+
                         dice = Main.dice.reroll(dice, name, possibilities);
                         Main.dice.printDice(dice);
+                        possibilities =combinaisons.tests(databool, dice, players);
                         t++;
                     }
                 }
@@ -75,6 +78,8 @@ public class main {
                 System.out.println("choose your score :");
                 for(int sc=0; sc<13 ;sc++){
                     if(!databool[players-1][sc]){
+                        possibilities =combinaisons.tests(databool, dice, players);
+
                         System.out.println(name[sc] +"  ["+possibilities[sc] +"] : type ("+sc+")");
                     }
                 }
@@ -101,8 +106,5 @@ public class main {
                 score.printFinalScore(players, data);
             }
         }
-
-
-
     }
 }
